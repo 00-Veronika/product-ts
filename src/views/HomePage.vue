@@ -69,7 +69,7 @@ import CarouselComponent from '../components/CarouselComponent.vue'
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
-  margin-top: 800px;
+  margin-top: 400px;
 }
 
 .about-brand h2 {
@@ -212,5 +212,38 @@ import CarouselComponent from '../components/CarouselComponent.vue'
 .contact-info i {
   color: #4caf50;
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-brand h2, .brand-values h2, .happy-customers h2, .customer-reviews h2, .contact h2 {
+    font-size: 2em;
+  }
+  .values-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .value-item {
+    width: 80%;
+  }
+  .customer-images {
+    justify-content: center;
+  }
+  .customer-images img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-brand h2, .brand-values h2, .happy-customers h2, .customer-reviews h2, .contact h2 {
+    font-size: 1.8em;
+  }
+  .value-item {
+    width: 100%;
+  }
+  .customer-images img {
+    width: 100px;
+    height: 100px;
+  }
 }
 </style>

@@ -354,4 +354,34 @@
 .footer a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .reviews, .customer-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .customer-images img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  .customer-images img {
+    width: 70px;
+    height: 70px;
+  }
+}
 </style>

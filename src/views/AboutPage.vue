@@ -181,16 +181,22 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .about-me-container {
-    padding: 15px;
+  .profile-grid {
+    grid-template-columns: 1fr;
   }
 
-  .about-me-container h2 {
-    font-size: 1.8em;
+  .profile-container, .about-me-container {
+    width: 95%;
   }
 
-  .skills h3 {
-    font-size: 1.1em;
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .reviews, .customer-images {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>

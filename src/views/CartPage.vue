@@ -187,4 +187,95 @@ h2 {
 .complete-order-btn:hover {
   background-color: #e68900;
 }
+
+@media (max-width: 768px) {
+  .cart {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .cart-item-details {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .item-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .remove-btn,
+  .increase-btn,
+  .clear-cart-btn,
+  .complete-order-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .cart-summary {
+    font-size: 16px;
+  }
+
+  .total-price {
+    font-size: 16px;
+  }
+
+  .empty-cart-message {
+    font-size: 16px;
+  }
+
+  .order-message {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .clear-cart-btn,
+  .complete-order-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-item {
+    padding: 8px;
+  }
+
+  .cart-item-details {
+    font-size: 13px;
+  }
+
+  .remove-btn,
+  .increase-btn,
+  .clear-cart-btn,
+  .complete-order-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .order-message {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .total-price {
+    font-size: 14px;
+  }
+
+  .empty-cart-message {
+    font-size: 14px;
+  }
+}
 </style>

@@ -29,7 +29,7 @@ const data: Product[] = [
   {
     category: 'T-Shirts',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta velit augue, et fermentum lectus fermentum ut.',
+      'Основата на всеки гардероб. Изработена от висококачествени материали, нашата тениска осигурява комфорт и стил през целия ден.',
     items: [
       {
         id: 100,
@@ -65,7 +65,7 @@ const data: Product[] = [
   {
     category: 'Sunglasses',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta velit augue, et fermentum lectus fermentum ut.',
+      'Защита от слънцето и безупречен стил в едно. Нашите слънчеви очила съчетават качество и модерен дизайн, за да се чувствате уверени и комфортни.',
     items: [
       {
         id: 200,
@@ -101,7 +101,7 @@ const data: Product[] = [
   {
     category: 'Hats',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta velit augue, et fermentum lectus fermentum ut.',
+      'Допълнете стила си с нашите модерни шапки. Те са практични и стилни, осигуряващи комфорт и защита от слънцето, без да правят компромис с визията.',
     items: [
       {
         id: 300,
@@ -137,7 +137,7 @@ const data: Product[] = [
   {
     category: 'Watches',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta velit augue, et fermentum lectus fermentum ut.',
+      'Комбинация от стил и функционалност. Нашите часовници са перфектни за всеки, който търси изтънченост и точност в ежедневието си.',
     items: [
       {
         id: 400,
@@ -173,7 +173,7 @@ const data: Product[] = [
   {
     category: 'Diamonds',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta velit augue, et fermentum lectus fermentum ut.',
+      'Превърнете всеки момент в незабравим с нашите изключителни диаманти. Идеални за специални поводи, те са символ на вечна красота и стойност.',
     items: [
       {
         id: 500,
@@ -209,7 +209,7 @@ const data: Product[] = [
   {
     category: 'Bracelets',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta velit augue, et fermentum lectus fermentum ut.',
+      'Перфектният аксесоар, който добавя стил и елегантност на всяко облекло. Изработени с внимание към детайлите, нашите гривни са подходящи за всеки повод.',
     items: [
       {
         id: 600,
@@ -325,7 +325,7 @@ const setCartCount = () => {
         </div>
 
         <div class="description">
-          <h3>BENEFITS</h3>
+          <h3>Описание:</h3>
           <ul class="noPoint">
             <li>{{ product.description }}</li>
           </ul>
@@ -476,6 +476,7 @@ const setCartCount = () => {
   flex: 1;
   padding: 10px;
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
 }
@@ -483,6 +484,7 @@ const setCartCount = () => {
 .title h1 {
   font-size: 28px;
   color: #333;
+  text-align: center;
 }
 
 .title span {
@@ -495,12 +497,13 @@ const setCartCount = () => {
   font-size: 26px;
   color: #44981a;
   font-weight: bold;
-  margin: 10px 0;
+  text-align: center;
 }
 
 .variant h3,
 .description h3 {
   color: #555;
+  text-align: center;
 }
 
 .noPoint {
@@ -552,37 +555,25 @@ const setCartCount = () => {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колони */
+  }
+
   .product {
     flex-direction: column;
-    margin: 20px;
+    align-items: center;
   }
 
-  .product__photo,
-  .product__info {
+  .product__photo {
     width: 100%;
-    max-width: none;
-  }
-
-  .photo-main img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-  }
-
-  .photo-album ul {
-    justify-content: flex-start;
-    gap: 8px;
-  }
-
-  .photo-album li img {
-    width: 50px;
-    height: 50px;
+    margin-bottom: 20px;
   }
 
   .product__info {
-    padding: 20px;
-    text-align: center;
+    flex: 1;
+    width: 100%;
   }
 
   .title h1 {
@@ -593,20 +584,35 @@ const setCartCount = () => {
     font-size: 22px;
   }
 
-  .variant h3,
-  .description h3 {
-    font-size: 18px;
-  }
-
   .buy--btn {
-    padding: 10px 18px;
-    font-size: 14px;
+    width: 100%;
   }
 }
 
-@media (max-width: 480px) {
-  .product {
-    margin: 15px;
+@media (max-width: 768px) {
+  .cart-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 колона */
+  }
+
+  .product__photo {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .photo-main img {
+    width: 200px;
+    height: 250px;
+  }
+
+  .product__info {
+    padding: 10px;
   }
 
   .title h1 {
@@ -614,11 +620,42 @@ const setCartCount = () => {
   }
 
   .price {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .buy--btn {
-    padding: 8px 15px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product__photo {
+    padding: 15px;
+  }
+
+  .product__info {
+    padding: 8px;
+  }
+
+  .title h1 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .buy--btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .navbar a {
     font-size: 14px;
   }
 }

@@ -29,9 +29,9 @@ import 'swiper/swiper-bundle.css'
   position: relative;
 }
 
-/* .carousel .swiper.swiper-initialized  {
+.carousel .swiper.swiper-initialized  {
   height: 530px;
-} */
+}
 
 .carousel .swiper-slide img {
   width: 100%;
